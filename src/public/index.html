@@ -63,7 +63,26 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-          Modal02
+            <form id="form-update" action="/update" method="post">
+              <div class="mb-3 form-group">
+                <label class="form-label">Nombres</label>
+                <input type="text" name="nombres" class="form-control" >
+              </div>
+              <div class="mb-3 form-group">
+                <label class="form-label">Apellidos</label>
+                <input type="text" name="apellidos" class="form-control">
+              </div>
+              <div class="mb-3 form-group">
+                <label class="form-label">Sexo</label>
+                <select class="form-select" name="sexo">
+                  <option selected>Ninguno</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="b2">Submit</button>
+            </form>
           </div>
       </div>
       </div>
@@ -94,31 +113,7 @@
           </tr>
         </thead>
         <tbody id="tabla">
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Masculino</td>
-            <td>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                Editar</button>
-                <button type="button" class="btn btn-primary">
-                Borrar</button> 
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
-                Ingresar notas</button>      
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          
         </tbody>
       </table>
       <script src="main.js"></script>
